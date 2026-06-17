@@ -61,7 +61,7 @@
             Controls.Add(textBox1);
             Controls.Add(clickPlus);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Моя программа";
             MouseClick += Form1_MouseClick;
             MouseMove += Form1_MouseMove;
             ResumeLayout(false);
