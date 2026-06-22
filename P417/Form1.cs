@@ -1,4 +1,3 @@
-
 using Timer = System.Windows.Forms.Timer;
 
 namespace WinForms_P417
@@ -16,7 +15,7 @@ namespace WinForms_P417
             vtimer.Tick += new EventHandler(ShowTimer);
             label2.Text = DateTime.Now.ToLongTimeString();
             vtimerDay.Tick += new EventHandler(ShowTime);
-            vtimerDay.Interval = 500;
+            vtimerDay.Interval = 200;
             vtimerDay.Start();
         }
         private void ShowTime(object sender, EventArgs e)
@@ -28,7 +27,7 @@ namespace WinForms_P417
             textBox2.Text = vtimer.Interval.ToString();
             vtimer.Stop();
             stop_btn.Enabled = false;
-            MessageBox.Show("Таймер отработал!", "Таймер");
+            MessageBox.Show("Таймер Отработал!", "Таймер");
         }
 
         int count = 1;
@@ -85,12 +84,12 @@ namespace WinForms_P417
         {
             if (numericUpDown1.Value <= 0)
             {
-                MessageBox.Show("Количество секунд должно быть больше 0!");
+                MessageBox.Show("Количетсво секунд должно быть больше 0!");
                 return;
             }
             stop_btn.Enabled = true;
             vtimer.Interval = Decimal.ToInt32(numericUpDown1.Value) * 1000;
-            textBox2.Text =  vtimer.Interval.ToString();
+            textBox2.Text = vtimer.Interval.ToString();
             vtimer.Start();
             start_btn.Enabled = false;
         }

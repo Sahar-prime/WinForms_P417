@@ -36,6 +36,7 @@
             label1 = new Label();
             textBox2 = new TextBox();
             label2 = new Label();
+            progressBar1 = new ProgressBar();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             SuspendLayout();
             // 
@@ -62,7 +63,7 @@
             // 
             // start_btn
             // 
-            start_btn.Location = new Point(305, 93);
+            start_btn.Location = new Point(210, 80);
             start_btn.Name = "start_btn";
             start_btn.Size = new Size(75, 23);
             start_btn.TabIndex = 2;
@@ -72,7 +73,7 @@
             // 
             // stop_btn
             // 
-            stop_btn.Location = new Point(418, 93);
+            stop_btn.Location = new Point(323, 80);
             stop_btn.Name = "stop_btn";
             stop_btn.Size = new Size(75, 23);
             stop_btn.TabIndex = 3;
@@ -82,7 +83,7 @@
             // 
             // numericUpDown1
             // 
-            numericUpDown1.Location = new Point(418, 53);
+            numericUpDown1.Location = new Point(323, 40);
             numericUpDown1.Name = "numericUpDown1";
             numericUpDown1.Size = new Size(75, 23);
             numericUpDown1.TabIndex = 4;
@@ -90,7 +91,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(288, 55);
+            label1.Location = new Point(193, 42);
             label1.Name = "label1";
             label1.Size = new Size(112, 15);
             label1.TabIndex = 5;
@@ -98,7 +99,7 @@
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(508, 52);
+            textBox2.Location = new Point(413, 39);
             textBox2.Name = "textBox2";
             textBox2.ReadOnly = true;
             textBox2.Size = new Size(33, 23);
@@ -114,11 +115,19 @@
             label2.TabIndex = 7;
             label2.Text = "label2";
             // 
+            // progressBar1
+            // 
+            progressBar1.Location = new Point(179, 132);
+            progressBar1.Name = "progressBar1";
+            progressBar1.Size = new Size(281, 22);
+            progressBar1.TabIndex = 8;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(804, 451);
+            Controls.Add(progressBar1);
             Controls.Add(label2);
             Controls.Add(textBox2);
             Controls.Add(label1);
@@ -146,5 +155,6 @@
         private Label label1;
         private TextBox textBox2;
         private Label label2;
+        private ProgressBar progressBar1;
     }
 }
