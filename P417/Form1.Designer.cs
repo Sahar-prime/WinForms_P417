@@ -30,11 +30,18 @@
         {
             clickPlus = new Button();
             textBox1 = new TextBox();
+            start_btn = new Button();
+            stop_btn = new Button();
+            numericUpDown1 = new NumericUpDown();
+            label1 = new Label();
+            textBox2 = new TextBox();
+            label2 = new Label();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             SuspendLayout();
             // 
             // clickPlus
             // 
-            clickPlus.Location = new Point(316, 238);
+            clickPlus.Location = new Point(12, 84);
             clickPlus.Name = "clickPlus";
             clickPlus.Size = new Size(105, 41);
             clickPlus.TabIndex = 0;
@@ -46,24 +53,85 @@
             // textBox1
             // 
             textBox1.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            textBox1.Location = new Point(222, 84);
+            textBox1.Location = new Point(12, 12);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.ReadOnly = true;
-            textBox1.Size = new Size(309, 117);
+            textBox1.Size = new Size(105, 64);
             textBox1.TabIndex = 1;
+            // 
+            // start_btn
+            // 
+            start_btn.Location = new Point(305, 93);
+            start_btn.Name = "start_btn";
+            start_btn.Size = new Size(75, 23);
+            start_btn.TabIndex = 2;
+            start_btn.Text = "Старт";
+            start_btn.UseVisualStyleBackColor = true;
+            start_btn.Click += start_btn_Click;
+            // 
+            // stop_btn
+            // 
+            stop_btn.Location = new Point(418, 93);
+            stop_btn.Name = "stop_btn";
+            stop_btn.Size = new Size(75, 23);
+            stop_btn.TabIndex = 3;
+            stop_btn.Text = "Стоп";
+            stop_btn.UseVisualStyleBackColor = true;
+            stop_btn.Click += stop_btn_Click;
+            // 
+            // numericUpDown1
+            // 
+            numericUpDown1.Location = new Point(418, 53);
+            numericUpDown1.Name = "numericUpDown1";
+            numericUpDown1.Size = new Size(75, 23);
+            numericUpDown1.TabIndex = 4;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(288, 55);
+            label1.Name = "label1";
+            label1.Size = new Size(112, 15);
+            label1.TabIndex = 5;
+            label1.Text = "Количество секунд";
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(508, 52);
+            textBox2.Name = "textBox2";
+            textBox2.ReadOnly = true;
+            textBox2.Size = new Size(33, 23);
+            textBox2.TabIndex = 6;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Black", 15.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 204);
+            label2.Location = new Point(677, 377);
+            label2.Name = "label2";
+            label2.Size = new Size(74, 30);
+            label2.TabIndex = 7;
+            label2.Text = "label2";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(804, 451);
+            Controls.Add(label2);
+            Controls.Add(textBox2);
+            Controls.Add(label1);
+            Controls.Add(numericUpDown1);
+            Controls.Add(stop_btn);
+            Controls.Add(start_btn);
             Controls.Add(textBox1);
             Controls.Add(clickPlus);
             Name = "Form1";
             Text = "Моя программа";
             MouseClick += Form1_MouseClick;
             MouseMove += Form1_MouseMove;
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -72,5 +140,11 @@
 
         private Button clickPlus;
         private TextBox textBox1;
+        private Button start_btn;
+        private Button stop_btn;
+        private NumericUpDown numericUpDown1;
+        private Label label1;
+        private TextBox textBox2;
+        private Label label2;
     }
 }

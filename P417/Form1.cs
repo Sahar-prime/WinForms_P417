@@ -1,13 +1,36 @@
+
+using Timer = System.Windows.Forms.Timer;
+
 namespace WinForms_P417
 {
     public partial class Form1 : Form
     {
         Random rnd = new Random();
+        Timer vtimer = new Timer();
+        Timer vtimerDay = new Timer();
         public Form1()
         {
             InitializeComponent();
+            stop_btn.Enabled = false;
 
+            vtimer.Tick += new EventHandler(ShowTimer);
+            label2.Text = DateTime.Now.ToLongTimeString();
+            vtimerDay.Tick += new EventHandler(ShowTime);
+            vtimerDay.Interval = 500;
+            vtimerDay.Start();
         }
+        private void ShowTime(object sender, EventArgs e)
+        {
+            label2.Text = DateTime.Now.ToLongTimeString();
+        }
+        private void ShowTimer(object sender, EventArgs e)
+        {
+            textBox2.Text = vtimer.Interval.ToString();
+            vtimer.Stop();
+            stop_btn.Enabled = false;
+            MessageBox.Show("Таймер отработал!", "Таймер");
+        }
+
         int count = 1;
         private void clickPlus_Click(object sender, EventArgs e)
         {
@@ -50,12 +73,33 @@ namespace WinForms_P417
             if (e.Button == MouseButtons.Right)
                 message = "Вы нажали правую кнопку мыши.";
 
-            if(e.Button == MouseButtons.Left)
+            if (e.Button == MouseButtons.Left)
                 message = "Вы нажали левую кнопку мыши.";
 
             message += "\n" + CoordinatesToString(e);
 
             MessageBox.Show(message, "Клик мыши", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void start_btn_Click(object sender, EventArgs e)
+        {
+            if (numericUpDown1.Value <= 0)
+            {
+                MessageBox.Show("Количество секунд должно быть больше 0!");
+                return;
+            }
+            stop_btn.Enabled = true;
+            vtimer.Interval = Decimal.ToInt32(numericUpDown1.Value) * 1000;
+            textBox2.Text =  vtimer.Interval.ToString();
+            vtimer.Start();
+            start_btn.Enabled = false;
+        }
+
+        private void stop_btn_Click(object sender, EventArgs e)
+        {
+            vtimer.Stop();
+            MessageBox.Show("Таймер не успел отработать! Принудительное отключение.", "Таймер");
+            stop_btn.Enabled = false;
         }
     }
 }
