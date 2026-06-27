@@ -4,5 +4,13 @@
     <Project Path="H_W/H_W.csproj" />
     <Project Path="H_W_2/H_W_2.csproj" />
   </Folder>
+  <Folder Name="/H_W/H_W_2/">
+    <Project Path="H_W_3/H_W_3.csproj" Id="ed944064-6a8c-4e1d-a69a-a1a5cfe4adc4" />
+    <Project Path="H_W_4/H_W_4.csproj" Id="d5fc3e13-3de7-45dc-a24a-b1ae25d5f501" />
+    <Project Path="H_W_5/H_W_5.csproj" Id="8314fe56-8282-4636-925b-d25a0f6483ef" />
+    <Project Path="H_W_6/H_W_6.csproj" Id="c5d60ebe-890b-42fd-a010-b96330cf33bb" />
+    <Project Path="H_W_7/H_W_7.csproj" Id="3e7e5b9c-9229-4178-8d40-31579048dd62" />
+    <Project Path="H_W_8/H_W_8.csproj" Id="0d682a5a-d9d6-47a6-8aa5-4d6451bc1d59" />
+  </Folder>
   <Project Path="P417/WinForms_P417.csproj" />
 </Solution>

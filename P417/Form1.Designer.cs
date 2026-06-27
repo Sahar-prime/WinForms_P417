@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             clickPlus = new Button();
             textBox1 = new TextBox();
             start_btn = new Button();
@@ -37,6 +38,8 @@
             textBox2 = new TextBox();
             label2 = new Label();
             progressBar1 = new ProgressBar();
+            toolTip1 = new ToolTip(components);
+            toolTip2 = new ToolTip(components);
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             SuspendLayout();
             // 
@@ -63,7 +66,7 @@
             // 
             // start_btn
             // 
-            start_btn.Location = new Point(210, 80);
+            start_btn.Location = new Point(184, 53);
             start_btn.Name = "start_btn";
             start_btn.Size = new Size(75, 23);
             start_btn.TabIndex = 2;
@@ -73,17 +76,18 @@
             // 
             // stop_btn
             // 
-            stop_btn.Location = new Point(323, 80);
+            stop_btn.Location = new Point(297, 53);
             stop_btn.Name = "stop_btn";
             stop_btn.Size = new Size(75, 23);
             stop_btn.TabIndex = 3;
             stop_btn.Text = "Стоп";
+            toolTip2.SetToolTip(stop_btn, "Принудительная остановка таймера");
             stop_btn.UseVisualStyleBackColor = true;
             stop_btn.Click += stop_btn_Click;
             // 
             // numericUpDown1
             // 
-            numericUpDown1.Location = new Point(323, 40);
+            numericUpDown1.Location = new Point(297, 13);
             numericUpDown1.Name = "numericUpDown1";
             numericUpDown1.Size = new Size(75, 23);
             numericUpDown1.TabIndex = 4;
@@ -91,7 +95,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(193, 42);
+            label1.Location = new Point(167, 15);
             label1.Name = "label1";
             label1.Size = new Size(112, 15);
             label1.TabIndex = 5;
@@ -99,7 +103,7 @@
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(413, 39);
+            textBox2.Location = new Point(387, 12);
             textBox2.Name = "textBox2";
             textBox2.ReadOnly = true;
             textBox2.Size = new Size(33, 23);
@@ -117,10 +121,15 @@
             // 
             // progressBar1
             // 
-            progressBar1.Location = new Point(179, 132);
+            progressBar1.Location = new Point(154, 103);
             progressBar1.Name = "progressBar1";
             progressBar1.Size = new Size(281, 22);
             progressBar1.TabIndex = 8;
+            // 
+            // toolTip1
+            // 
+            toolTip1.IsBalloon = true;
+            toolTip1.Tag = "";
             // 
             // Form1
             // 
@@ -156,5 +165,7 @@
         private TextBox textBox2;
         private Label label2;
         private ProgressBar progressBar1;
+        private ToolTip toolTip1;
+        private ToolTip toolTip2;
     }
 }

@@ -4,9 +4,15 @@ namespace WinForms_P417
 {
     public partial class Form1 : Form
     {
+        int count = 1;
+        int count_tick = 0;
         Random rnd = new Random();
+
         Timer vtimer = new Timer();
         Timer vtimerDay = new Timer();
+        Timer vtime  = new Timer();
+        Timer ctimer = new Timer();
+
         public Form1()
         {
             InitializeComponent();
@@ -14,23 +20,53 @@ namespace WinForms_P417
 
             vtimer.Tick += new EventHandler(ShowTimer);
             label2.Text = DateTime.Now.ToLongTimeString();
+
             vtimerDay.Tick += new EventHandler(ShowTime);
             vtimerDay.Interval = 200;
             vtimerDay.Start();
+
+            vtime.Tick += new EventHandler(ShowTick);
+            vtime.Interval = 800;
+
+            ctimer.Tick += new EventHandler(ChangeBackgroundColor);
+            ctimer.Interval = 1000;
+            ctimer.Start();
+
+            toolTip1.SetToolTip(label2, "Время по МСК");
         }
+
+        private void ChangeBackgroundColor(object sender, EventArgs e)
+        {
+            int red = rnd.Next(256);
+            int green = rnd.Next(256);
+            int blue = rnd.Next(256);
+
+            this.BackColor = Color.FromArgb(red, green, blue);
+        }
+
+        private void ShowTick(object sender, EventArgs e) 
+        {
+            if (count_tick > 0)
+            {
+                count_tick--;
+                progressBar1.Value++;
+            }
+        }
+
         private void ShowTime(object sender, EventArgs e)
         {
             label2.Text = DateTime.Now.ToLongTimeString();
         }
         private void ShowTimer(object sender, EventArgs e)
         {
-            textBox2.Text = vtimer.Interval.ToString();
             vtimer.Stop();
+            vtime.Stop();
             stop_btn.Enabled = false;
             MessageBox.Show("Таймер Отработал!", "Таймер");
+            start_btn.Enabled = true;
+            progressBar1.Value = 0;
         }
 
-        int count = 1;
         private void clickPlus_Click(object sender, EventArgs e)
         {
             textBox1.Text = count++.ToString();
@@ -89,16 +125,25 @@ namespace WinForms_P417
             }
             stop_btn.Enabled = true;
             vtimer.Interval = Decimal.ToInt32(numericUpDown1.Value) * 1000;
-            textBox2.Text = vtimer.Interval.ToString();
+
+            count_tick = Decimal.ToInt32(numericUpDown1.Value);
+            progressBar1.Maximum = count_tick;
+            progressBar1.Minimum = 0;
+
+            vtime.Start();
             vtimer.Start();
+
             start_btn.Enabled = false;
         }
 
         private void stop_btn_Click(object sender, EventArgs e)
         {
             vtimer.Stop();
+            vtime.Stop();
             MessageBox.Show("Таймер не успел отработать! Принудительное отключение.", "Таймер");
+            progressBar1.Value = 0;
             stop_btn.Enabled = false;
+            start_btn.Enabled = true;
         }
     }
 }
