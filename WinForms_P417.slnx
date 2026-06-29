@@ -13,4 +13,5 @@
     <Project Path="H_W_8/H_W_8.csproj" Id="0d682a5a-d9d6-47a6-8aa5-4d6451bc1d59" />
   </Folder>
   <Project Path="P417/WinForms_P417.csproj" />
+  <Project Path="Test/Test.csproj" Id="d322b75b-c486-4e01-83f3-bc4406535186" />
 </Solution>

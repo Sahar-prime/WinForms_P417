@@ -1,6 +1,6 @@
 ﻿namespace WinForms_P417
 {
-    partial class Form1
+    partial class Parent
     {
         /// <summary>
         ///  Required designer variable.
@@ -40,6 +40,8 @@
             progressBar1 = new ProgressBar();
             toolTip1 = new ToolTip(components);
             toolTip2 = new ToolTip(components);
+            btn_child = new Button();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             SuspendLayout();
             // 
@@ -103,10 +105,9 @@
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(387, 12);
+            textBox2.Location = new Point(12, 256);
             textBox2.Name = "textBox2";
-            textBox2.ReadOnly = true;
-            textBox2.Size = new Size(33, 23);
+            textBox2.Size = new Size(232, 23);
             textBox2.TabIndex = 6;
             // 
             // label2
@@ -131,11 +132,33 @@
             toolTip1.IsBalloon = true;
             toolTip1.Tag = "";
             // 
-            // Form1
+            // btn_child
+            // 
+            btn_child.Location = new Point(12, 286);
+            btn_child.Name = "btn_child";
+            btn_child.Size = new Size(113, 23);
+            btn_child.TabIndex = 9;
+            btn_child.Text = "Форма2 немодал";
+            btn_child.UseVisualStyleBackColor = true;
+            btn_child.Click += button1_Click;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(131, 286);
+            button1.Name = "button1";
+            button1.Size = new Size(113, 23);
+            button1.TabIndex = 10;
+            button1.Text = "Форма2 модал";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click_1;
+            // 
+            // Parent
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(804, 451);
+            Controls.Add(button1);
+            Controls.Add(btn_child);
             Controls.Add(progressBar1);
             Controls.Add(label2);
             Controls.Add(textBox2);
@@ -145,7 +168,9 @@
             Controls.Add(start_btn);
             Controls.Add(textBox1);
             Controls.Add(clickPlus);
-            Name = "Form1";
+            FormBorderStyle = FormBorderStyle.Fixed3D;
+            MaximizeBox = false;
+            Name = "Parent";
             Text = "Моя программа";
             MouseClick += Form1_MouseClick;
             MouseMove += Form1_MouseMove;
@@ -167,5 +192,7 @@
         private ProgressBar progressBar1;
         private ToolTip toolTip1;
         private ToolTip toolTip2;
+        private Button btn_child;
+        private Button button1;
     }
 }

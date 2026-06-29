@@ -2,18 +2,21 @@ using Timer = System.Windows.Forms.Timer;
 
 namespace WinForms_P417
 {
-    public partial class Form1 : Form
+    public partial class Parent : Form
     {
         int count = 1;
         int count_tick = 0;
+
         Random rnd = new Random();
 
         Timer vtimer = new Timer();
         Timer vtimerDay = new Timer();
-        Timer vtime  = new Timer();
+        Timer vtime = new Timer();
         Timer ctimer = new Timer();
 
-        public Form1()
+        Child f = null;
+
+        public Parent()
         {
             InitializeComponent();
             stop_btn.Enabled = false;
@@ -35,6 +38,24 @@ namespace WinForms_P417
             toolTip1.SetToolTip(label2, "Время по МСК");
         }
 
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if (f != null) f.Close();
+
+            f = new Child();
+            f.Show();
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Child f = new Child(textBox2.Text); //передача по конструктору
+            Child f = new Child();
+            // f.SetTText(textBox2.Text); // передача по методу\свойству
+            //f.ShowDialog(textBox2.Text); // передача через перегрузку ShowDialog
+            if (f.ShowDialog() == DialogResult.OK)
+                textBox2.Text = f.GetTText();
+            MessageBox.Show("Конец программы окна 2");
+        }
+
         private void ChangeBackgroundColor(object sender, EventArgs e)
         {
             int red = rnd.Next(256);
@@ -44,7 +65,7 @@ namespace WinForms_P417
             this.BackColor = Color.FromArgb(red, green, blue);
         }
 
-        private void ShowTick(object sender, EventArgs e) 
+        private void ShowTick(object sender, EventArgs e)
         {
             if (count_tick > 0)
             {
