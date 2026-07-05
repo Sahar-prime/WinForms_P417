@@ -12,6 +12,10 @@
     <Project Path="H_W_7/H_W_7.csproj" Id="3e7e5b9c-9229-4178-8d40-31579048dd62" />
     <Project Path="H_W_8/H_W_8.csproj" Id="0d682a5a-d9d6-47a6-8aa5-4d6451bc1d59" />
   </Folder>
+  <Folder Name="/H_W/H_W_3/">
+    <Project Path="HW/HW.csproj" Id="9354bb47-b345-4e9f-9db6-4eef5690dcd6" />
+    <Project Path="HW_2/HW_2.csproj" Id="ee7c8a98-5619-4a4d-86d4-1b2d7c45be7c" />
+  </Folder>
   <Project Path="P417/WinForms_P417.csproj" />
   <Project Path="Test/Test.csproj" Id="d322b75b-c486-4e01-83f3-bc4406535186" />
 </Solution>
