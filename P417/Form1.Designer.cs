@@ -42,12 +42,15 @@
             toolTip2 = new ToolTip(components);
             btn_child = new Button();
             button1 = new Button();
+            menuStrip1 = new MenuStrip();
+            toolStripMenuItem1 = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // clickPlus
             // 
-            clickPlus.Location = new Point(12, 84);
+            clickPlus.Location = new Point(12, 125);
             clickPlus.Name = "clickPlus";
             clickPlus.Size = new Size(105, 41);
             clickPlus.TabIndex = 0;
@@ -59,7 +62,7 @@
             // textBox1
             // 
             textBox1.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            textBox1.Location = new Point(12, 12);
+            textBox1.Location = new Point(12, 53);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.ReadOnly = true;
@@ -68,7 +71,7 @@
             // 
             // start_btn
             // 
-            start_btn.Location = new Point(184, 53);
+            start_btn.Location = new Point(276, 58);
             start_btn.Name = "start_btn";
             start_btn.Size = new Size(75, 23);
             start_btn.TabIndex = 2;
@@ -78,7 +81,7 @@
             // 
             // stop_btn
             // 
-            stop_btn.Location = new Point(297, 53);
+            stop_btn.Location = new Point(389, 58);
             stop_btn.Name = "stop_btn";
             stop_btn.Size = new Size(75, 23);
             stop_btn.TabIndex = 3;
@@ -89,7 +92,7 @@
             // 
             // numericUpDown1
             // 
-            numericUpDown1.Location = new Point(297, 13);
+            numericUpDown1.Location = new Point(389, 27);
             numericUpDown1.Name = "numericUpDown1";
             numericUpDown1.Size = new Size(75, 23);
             numericUpDown1.TabIndex = 4;
@@ -97,7 +100,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(167, 15);
+            label1.Location = new Point(260, 29);
             label1.Name = "label1";
             label1.Size = new Size(112, 15);
             label1.TabIndex = 5;
@@ -122,7 +125,7 @@
             // 
             // progressBar1
             // 
-            progressBar1.Location = new Point(154, 103);
+            progressBar1.Location = new Point(246, 108);
             progressBar1.Name = "progressBar1";
             progressBar1.Size = new Size(281, 22);
             progressBar1.TabIndex = 8;
@@ -152,6 +155,23 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click_1;
             // 
+            // menuStrip1
+            // 
+            menuStrip1.Items.AddRange(new ToolStripItem[] { toolStripMenuItem1 });
+            menuStrip1.LayoutStyle = ToolStripLayoutStyle.HorizontalStackWithOverflow;
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(804, 24);
+            menuStrip1.TabIndex = 11;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // toolStripMenuItem1
+            // 
+            toolStripMenuItem1.Image = Properties.Resources.toppng_com_windows_7_logo_png_download_894x894;
+            toolStripMenuItem1.Name = "toolStripMenuItem1";
+            toolStripMenuItem1.Size = new Size(59, 20);
+            toolStripMenuItem1.Text = "TEST";
+            // 
             // Parent
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -168,13 +188,17 @@
             Controls.Add(start_btn);
             Controls.Add(textBox1);
             Controls.Add(clickPlus);
+            Controls.Add(menuStrip1);
             FormBorderStyle = FormBorderStyle.Fixed3D;
+            MainMenuStrip = menuStrip1;
             MaximizeBox = false;
             Name = "Parent";
             Text = "Моя программа";
             MouseClick += Form1_MouseClick;
             MouseMove += Form1_MouseMove;
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -194,5 +218,7 @@
         private ToolTip toolTip2;
         private Button btn_child;
         private Button button1;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem toolStripMenuItem1;
     }
 }

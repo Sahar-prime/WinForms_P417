@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WinForms_P417.Properties {
+namespace P417_Picture.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace WinForms_P417.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("WinForms_P417.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("P417_Picture.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -57,16 +57,6 @@ namespace WinForms_P417.Properties {
             }
             set {
                 resourceCulture = value;
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap toppng_com_windows_7_logo_png_download_894x894 {
-            get {
-                object obj = ResourceManager.GetObject("toppng.com-windows-7-logo-png-download-894x894", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using Timer = System.Windows.Forms.Timer;
 
 namespace WinForms_P417
@@ -21,21 +22,57 @@ namespace WinForms_P417
             InitializeComponent();
             stop_btn.Enabled = false;
 
-            vtimer.Tick += new EventHandler(ShowTimer);
-            label2.Text = DateTime.Now.ToLongTimeString();
+            {
+                vtimer.Tick += new EventHandler(ShowTimer);
+                label2.Text = DateTime.Now.ToLongTimeString();
 
-            vtimerDay.Tick += new EventHandler(ShowTime);
-            vtimerDay.Interval = 200;
-            vtimerDay.Start();
+                vtimerDay.Tick += new EventHandler(ShowTime);
+                vtimerDay.Interval = 200;
+                vtimerDay.Start();
 
-            vtime.Tick += new EventHandler(ShowTick);
-            vtime.Interval = 800;
+                vtime.Tick += new EventHandler(ShowTick);
+                vtime.Interval = 800;
 
-            ctimer.Tick += new EventHandler(ChangeBackgroundColor);
-            ctimer.Interval = 1000;
-            ctimer.Start();
+                ctimer.Tick += new EventHandler(ChangeBackgroundColor);
+                ctimer.Interval = 1000;
+                ctimer.Start();
+            }
 
             toolTip1.SetToolTip(label2, "Время по МСК");
+
+            {
+                ToolStripMenuItem fileItem = new ToolStripMenuItem("Файл"); //Новый элемент меню
+                ToolStripMenuItem newItem = new ToolStripMenuItem("Создать") { Checked = true, CheckOnClick = true };
+                ToolStripMenuItem saveItem = new ToolStripMenuItem("Сохранить") { Checked = true, CheckOnClick = true };
+                ToolStripMenuItem startGame = new ToolStripMenuItem("Запустить игру");
+
+                startGame.Click += StartGame_Click;
+                saveItem.Click += saveItem_Click;
+                saveItem.Image = Image.FromFile(@"G:\user\Pictures\toppng.com-windows-7-logo-png-download-894x894.png");
+
+                saveItem.ShortcutKeys = Keys.Control | Keys.B;
+                fileItem.DropDownItems.Add(saveItem);
+                fileItem.DropDownItems.Add(startGame);
+                fileItem.DropDownItems.Add(newItem);
+
+                menuStrip1.Items.Add(fileItem);//добавление в элемент меню под элемент
+
+                ToolStripMenuItem aboutItem = new ToolStripMenuItem("О программе");
+                aboutItem.Click += aboutItem_Click;
+                menuStrip1.Items.Add(aboutItem);
+            }
+        }
+        private void StartGame_Click(object? sender, EventArgs e) 
+        {
+            Process.Start(@"C:\Program Files\Roblox\Versions\version-f5a60436d48947d3\RobloxPlayerBeta.exe");
+        }
+        private void saveItem_Click(object sender, EventArgs e) 
+        {
+            MessageBox.Show("Вы надали shortcut");
+        }
+        private void aboutItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Программа создана студентом группы 417", "О программе");
         }
 
         private void button1_Click_1(object sender, EventArgs e)
