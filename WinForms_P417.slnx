@@ -16,6 +16,7 @@
     <Project Path="HW/HW.csproj" Id="9354bb47-b345-4e9f-9db6-4eef5690dcd6" />
     <Project Path="HW_2/HW_2.csproj" Id="ee7c8a98-5619-4a4d-86d4-1b2d7c45be7c" />
   </Folder>
+  <Project Path="My_Picture/My_Picture.csproj" Id="ce04a5eb-c70f-4d0e-ae22-771f67e57aad" />
   <Project Path="P417/WinForms_P417.csproj" />
   <Project Path="P417_Picture/P417_Picture.csproj" Id="f17be095-50c9-43b0-9512-7c18de218e4b" />
   <Project Path="Test/Test.csproj" Id="d322b75b-c486-4e01-83f3-bc4406535186" />
