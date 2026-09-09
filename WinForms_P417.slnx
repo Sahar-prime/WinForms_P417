@@ -19,5 +19,6 @@
   <Project Path="My_Picture/My_Picture.csproj" Id="ce04a5eb-c70f-4d0e-ae22-771f67e57aad" />
   <Project Path="P417/WinForms_P417.csproj" />
   <Project Path="P417_Picture/P417_Picture.csproj" Id="f17be095-50c9-43b0-9512-7c18de218e4b" />
+  <Project Path="P417_POCO/P417_POCO.csproj" Id="71312b71-3b78-4241-b8d8-d0f8eae336ca" />
   <Project Path="Test/Test.csproj" Id="d322b75b-c486-4e01-83f3-bc4406535186" />
 </Solution>

@@ -7,18 +7,19 @@ namespace WinForms_P417
     {
         int count = 1;
         int count_tick = 0;
-
+        
         Random rnd = new Random();
-
+        
         Timer vtimer = new Timer();
         Timer vtimerDay = new Timer();
         Timer vtime = new Timer();
-        Timer ctimer = new Timer();
+        Timer ctimer = new Timer(); 
 
-        Child f = null;
+        Child f = null; 
 
         public Parent()
         {
+
             InitializeComponent();
             stop_btn.Enabled = false;
 
@@ -60,7 +61,17 @@ namespace WinForms_P417
                 ToolStripMenuItem aboutItem = new ToolStripMenuItem("О программе");
                 aboutItem.Click += aboutItem_Click;
                 menuStrip1.Items.Add(aboutItem);
+
             }
+
+            //label6.DataBindings.Add(new Binding("Text", textBox3, "Text")); // привязка свойства Text к свойству Text textBox3
+            Binding binding = new Binding("Text", textBox3, "Text");
+            binding.Format += (sender, e) => e.Value = $"Content: {e.Value}";
+            //label6.DataBindings.Add(binding);
+            Binding binding1 = new Binding("Text", dateTimePicker1, "Value");
+            binding1.FormattingEnabled = true;
+            binding1.FormatString = "dd.MM.yyyy";
+            label6.DataBindings.Add(binding1);
         }
         private void StartGame_Click(object? sender, EventArgs e) 
         {

@@ -1,0 +1,149 @@
+## WORKSPACE EXECUTIVE SUMMARY (YAML)
+# Generated: 2026-09-09T19:18:46.9873008+03:00
+# Root: G:\P417\WinForms_Main\WinForms_P417
+Architecture:
+  Type: Backend (C#/.NET)
+  Scale: 70 relevant source files
+  Components: 0
+  Controllers: 0
+  Models: 0
+  Services: 0
+---
+- File: Binding\Binding.csproj
+  Preview: "<Project Sdk='Microsoft.NET.Sdk'>  <PropertyGroup>   <OutputType>WinExe</OutputType>   <TargetFramework>net10.0-windows</TargetFramework>   <Nullable>..."
+- File: HW\HW.csproj
+  Preview: "<Project Sdk='Microsoft.NET.Sdk'>  <PropertyGroup>   <OutputType>WinExe</OutputType>   <TargetFramework>net10.0-windows</TargetFramework>   <Nullable>..."
+- File: HW_2\HW_2.csproj
+  Preview: "<Project Sdk='Microsoft.NET.Sdk'>  <PropertyGroup>   <OutputType>WinExe</OutputType>   <TargetFramework>net10.0-windows</TargetFramework>   <Nullable>..."
+- File: H_W\H_W.csproj
+  Preview: "<Project Sdk='Microsoft.NET.Sdk'>  <PropertyGroup>   <OutputType>WinExe</OutputType>   <TargetFramework>net10.0-windows</TargetFramework>   <Nullable>..."
+- File: H_W_2\H_W_2.csproj
+  Preview: "<Project Sdk='Microsoft.NET.Sdk'>  <PropertyGroup>   <OutputType>WinExe</OutputType>   <TargetFramework>net10.0-windows</TargetFramework>   <Nullable>..."
+- File: H_W_3\H_W_3.csproj
+  Preview: "<Project Sdk='Microsoft.NET.Sdk'>  <PropertyGroup>   <OutputType>WinExe</OutputType>   <TargetFramework>net10.0-windows</TargetFramework>   <Nullable>..."
+- File: H_W_4\H_W_4.csproj
+  Preview: "<Project Sdk='Microsoft.NET.Sdk'>  <PropertyGroup>   <OutputType>WinExe</OutputType>   <TargetFramework>net10.0-windows</TargetFramework>   <Nullable>..."
+- File: H_W_5\H_W_5.csproj
+  Preview: "<Project Sdk='Microsoft.NET.Sdk'>  <PropertyGroup>   <OutputType>WinExe</OutputType>   <TargetFramework>net10.0-windows</TargetFramework>   <Nullable>..."
+- File: H_W_6\H_W_6.csproj
+  Preview: "<Project Sdk='Microsoft.NET.Sdk'>  <PropertyGroup>   <OutputType>WinExe</OutputType>   <TargetFramework>net10.0-windows</TargetFramework>   <Nullable>..."
+- File: H_W_7\H_W_7.csproj
+  Preview: "<Project Sdk='Microsoft.NET.Sdk'>  <PropertyGroup>   <OutputType>WinExe</OutputType>   <TargetFramework>net10.0-windows</TargetFramework>   <Nullable>..."
+- File: H_W_8\H_W_8.csproj
+  Preview: "<Project Sdk='Microsoft.NET.Sdk'>  <PropertyGroup>   <OutputType>WinExe</OutputType>   <TargetFramework>net10.0-windows</TargetFramework>   <Nullable>..."
+- File: My_Picture\My_Picture.csproj
+  Preview: "<Project Sdk='Microsoft.NET.Sdk'>  <PropertyGroup>   <OutputType>WinExe</OutputType>   <TargetFramework>net10.0-windows</TargetFramework>   <Nullable>..."
+- File: P417\WinForms_P417.csproj
+  Preview: "<Project Sdk='Microsoft.NET.Sdk'>  <PropertyGroup>   <OutputType>WinExe</OutputType>   <TargetFramework>net10.0-windows</TargetFramework>   <Nullable>..."
+- File: P417_Picture\P417_Picture.csproj
+  Preview: "<Project Sdk='Microsoft.NET.Sdk'>  <PropertyGroup>   <OutputType>WinExe</OutputType>   <TargetFramework>net10.0-windows</TargetFramework>   <Nullable>..."
+- File: Test\Test.csproj
+  Preview: "<Project Sdk='Microsoft.NET.Sdk'>  <PropertyGroup>   <OutputType>WinExe</OutputType>   <TargetFramework>net10.0-windows</TargetFramework>   <Nullable>..."
+- File: WinForms_P417.slnx
+  Preview: "<Solution>  <Folder Name='/H_W/' />  <Folder Name='/H_W/H_W_1/'>   <Project Path='H_W/H_W.csproj' />   <Project Path='H_W_2/H_W_2.csproj' />  </Folder..."
+- File: Binding\Form1.cs
+  Preview: "namespace Binding {   public partial class Form1 : Form   {     public Form1()     {       InitializeComponent();       Person person = new Person(Nam..."
+- File: Binding\Form1.Designer.cs
+  Preview: "namespace Binding {   partial class Form1   {     /// <summary>     /// Required designer variable.     /// </summary>     private System.ComponentMod..."
+- File: Binding\Person.cs
+  Preview: "using System; using System.Collections.Generic; using System.Text; namespace Binding {   internal class Person   {     //выведи привет 5 раз        } ..."
+- File: Binding\Program.cs
+  Preview: "namespace Binding {   internal static class Program   {     /// <summary>     /// The main entry point for the application.     /// </summary>     [ST..."
+- File: HW\Form1.cs
+  Preview: "namespace HW {   public partial class Form1 : Form   {     public Form1()     {       InitializeComponent();     }     private async void btnReadFile_..."
+- File: HW\Form1.Designer.cs
+  Preview: "namespace HW {   partial class Form1   {     /// <summary>     /// Required designer variable.     /// </summary>     private System.ComponentModel.IC..."
+- File: HW\Program.cs
+  Preview: "namespace HW {   internal static class Program   {     /// <summary>     /// The main entry point for the application.     /// </summary>     [STAThre..."
+- File: HW_2\Form1.cs
+  Preview: "using System.Xml.Serialization; namespace HW_2 {   public partial class Form1 : Form   {     // Список для хранения всех пользователей.     private Li..."
+- File: HW_2\Form1.Designer.cs
+  Preview: "namespace HW_2 {   partial class Form1   {     /// <summary>     /// Required designer variable.     /// </summary>     private System.ComponentModel...."
+- File: HW_2\Program.cs
+  Preview: "namespace HW_2 {   internal static class Program   {     /// <summary>     /// The main entry point for the application.     /// </summary>     [STATh..."
+- File: H_W\Form1.cs
+  Preview: "namespace H_W {   public partial class Form1 : Form   {     public Form1()     {       InitializeComponent();     }     private void INFO_Click(object..."
+- File: H_W\Form1.Designer.cs
+  Preview: "namespace H_W {   partial class Form1   {     /// <summary>     /// Required designer variable.     /// </summary>     private System.ComponentModel.I..."
+- File: H_W\Program.cs
+  Preview: "namespace H_W {   internal static class Program   {     /// <summary>     /// The main entry point for the application.     /// </summary>     [STAThr..."
+- File: H_W_2\Form1.cs
+  Preview: "namespace H_W_2 {   public partial class Form1 : Form   {     public Form1()     {       InitializeComponent();     }     private void button1_Click(o..."
+- File: H_W_2\Form1.Designer.cs
+  Preview: "namespace H_W_2 {   partial class Form1   {     /// <summary>     /// Required designer variable.     /// </summary>     private System.ComponentModel..."
+- File: H_W_2\Program.cs
+  Preview: "namespace H_W_2 {   internal static class Program   {     /// <summary>     /// The main entry point for the application.     /// </summary>     [STAT..."
+- File: H_W_3\Form1.cs
+  Preview: "namespace H_W_3 {   public partial class Form1 : Form   {     // Отступ прямоугольника от границ рабочей области     private const int PaddingAmount =..."
+- File: H_W_3\Form1.Designer.cs
+  Preview: "namespace H_W_3 {   partial class Form1   {     /// <summary>     /// Required designer variable.     /// </summary>     private System.ComponentModel..."
+- File: H_W_3\Program.cs
+  Preview: "namespace H_W_3 {   internal static class Program   {     /// <summary>     /// The main entry point for the application.     /// </summary>     [STAT..."
+- File: H_W_4\Form1.cs
+  Preview: "namespace H_W_4 {   public partial class Form1 : Form   {     private Point startPoint; // Хранит координаты (X, Y) точки, где пользователь зажал леву..."
+- File: H_W_4\Form1.Designer.cs
+  Preview: "namespace H_W_4 {   partial class Form1   {     /// <summary>     /// Required designer variable.     /// </summary>     private System.ComponentModel..."
+- File: H_W_4\Program.cs
+  Preview: "namespace H_W_4 {   internal static class Program   {     /// <summary>     /// The main entry point for the application.     /// </summary>     [STAT..."
+- File: H_W_5\Form1.cs
+  Preview: "namespace H_W_5 {   public partial class Form1 : Form   {     private Label runawayStatic; // Наш 'убегающий статик'     private Random random = new R..."
+- File: H_W_5\Form1.Designer.cs
+  Preview: "namespace H_W_5 {   partial class Form1   {     /// <summary>     /// Required designer variable.     /// </summary>     private System.ComponentModel..."
+- File: H_W_5\Program.cs
+  Preview: "namespace H_W_5 {   internal static class Program   {     /// <summary>     /// The main entry point for the application.     /// </summary>     [STAT..."
+- File: H_W_6\Form1.cs
+  Preview: "using System.Globalization; namespace H_W_6 {   public partial class Form1 : Form   {     public Form1()     {       InitializeComponent();     }     ..."
+- File: H_W_6\Form1.Designer.cs
+  Preview: "namespace H_W_6 {   partial class Form1   {     /// <summary>     /// Required designer variable.     /// </summary>     private System.ComponentModel..."
+- File: H_W_6\Program.cs
+  Preview: "namespace H_W_6 {   internal static class Program   {     /// <summary>     /// The main entry point for the application.     /// </summary>     [STAT..."
+- File: H_W_7\Form1.cs
+  Preview: "using System.Globalization; namespace H_W_7 {   public partial class Form1 : Form   {     public Form1()     {       InitializeComponent();     }     ..."
+- File: H_W_7\Form1.Designer.cs
+  Preview: "namespace H_W_7 {   partial class Form1   {     /// <summary>     /// Required designer variable.     /// </summary>     private System.ComponentModel..."
+- File: H_W_7\Program.cs
+  Preview: "namespace H_W_7 {   internal static class Program   {     /// <summary>     /// The main entry point for the application.     /// </summary>     [STAT..."
+- File: H_W_8\Form1.cs
+  Preview: "namespace H_W_8 {   public partial class Form1 : Form   {     // Базовые тарифы на топливо     private double priceA92 = 40.00;     private double pri..."
+- File: H_W_8\Form1.Designer.cs
+  Preview: "namespace H_W_8 {   partial class Form1   {     private System.ComponentModel.IContainer components = null;     protected override void Dispose(bool d..."
+- File: H_W_8\Program.cs
+  Preview: "namespace H_W_8 {   internal static class Program   {     /// <summary>     /// The main entry point for the application.     /// </summary>     [STAT..."
+- File: My_Picture\Form1.cs
+  Preview: "namespace My_Picture {   public partial class Form1 : Form   {     private Bitmap currentBitmap;     private Stack<Bitmap> history;     private Point ..."
+- File: My_Picture\Form1.Designer.cs
+  Preview: "namespace My_Picture {   partial class Form1   {     /// <summary>     /// Required designer variable.     /// </summary>     private System.Component..."
+- File: My_Picture\Program.cs
+  Preview: "namespace My_Picture {   internal static class Program   {     /// <summary>     /// The main entry point for the application.     /// </summary>     ..."
+- File: P417\Form1.cs
+  Preview: "using System.Diagnostics; using Timer = System.Windows.Forms.Timer; namespace WinForms_P417 {   public partial class Parent : Form   {     int count =..."
+- File: P417\Form1.Designer.cs
+  Preview: "namespace WinForms_P417 {   partial class Parent   {     /// <summary>     /// Required designer variable.     /// </summary>     private System.Compo..."
+- File: P417\Form2.cs
+  Preview: "namespace WinForms_P417 {   public partial class Child : Form   {     Parent _parent;     public Child()     {       InitializeComponent();     }     ..."
+- File: P417\Form2.Designer.cs
+  Preview: "using System.Xml.Linq; using static System.Net.Mime.MediaTypeNames; namespace WinForms_P417 {   partial class Child   {     /// <summary>     /// Requ..."
+- File: P417\Program.cs
+  Preview: "namespace WinForms_P417 {   internal static class Program   {     /// <summary>     /// The main entry point for the application.     /// </summary>  ..."
+- File: P417_Picture\Form1.cs
+  Preview: "namespace P417_Picture {   public partial class Form1 : Form   {     private Bitmap currentBitmap;      // текущее изображение     private Stack<Bitma..."
+- File: P417_Picture\Form1.Designer.cs
+  Preview: "namespace P417_Picture {   partial class Form1   {     /// <summary>     /// Required designer variable.     /// </summary>     private System.Compone..."
+- File: P417_Picture\Program.cs
+  Preview: "namespace P417_Picture {   internal static class Program   {     /// <summary>     /// The main entry point for the application.     /// </summary>   ..."
+- File: Test\Form1.cs
+  Preview: "namespace Test {   public partial class MainForm : Form   {     Tovar t = null;     public MainForm()     {       InitializeComponent();     }     pri..."
+- File: Test\Form1.Designer.cs
+  Preview: "namespace Test {   partial class MainForm   {     /// <summary>     /// Required designer variable.     /// </summary>     private System.ComponentMod..."
+- File: Test\Form2.cs
+  Preview: "namespace Test {   public partial class DopForm : Form   {     Tovar t;     bool addNew;     public DopForm(Tovar t, bool addNew)     {       Initiali..."
+- File: Test\Form2.Designer.cs
+  Preview: "namespace Test {   partial class DopForm   {     /// <summary>     /// Required designer variable.     /// </summary>     private System.ComponentMode..."
+- File: Test\Program.cs
+  Preview: "namespace Test {   internal static class Program   {     /// <summary>     /// The main entry point for the application.     /// </summary>     [STATh..."
+- File: Test\Tovar.cs
+  Preview: "namespace Test {   public class Tovar   {     string _name;     string _made_in;     double _price;     public string Name     {       get { return _n..."
+- File: P417\Properties\Resources.Designer.cs
+  Preview: "//------------------------------------------------------------------------------ // <auto-generated> //   Этот код создан программой. //   Исполняемая..."
+- File: P417_Picture\Properties\Resources.Designer.cs
+  Preview: "//------------------------------------------------------------------------------ // <auto-generated> //   Этот код создан программой. //   Исполняемая..."

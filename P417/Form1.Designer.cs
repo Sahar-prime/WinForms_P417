@@ -44,6 +44,9 @@
             button1 = new Button();
             menuStrip1 = new MenuStrip();
             toolStripMenuItem1 = new ToolStripMenuItem();
+            textBox3 = new TextBox();
+            label6 = new Label();
+            dateTimePicker1 = new DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             menuStrip1.SuspendLayout();
             SuspendLayout();
@@ -172,11 +175,37 @@
             toolStripMenuItem1.Size = new Size(59, 20);
             toolStripMenuItem1.Text = "TEST";
             // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(651, 93);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(100, 23);
+            textBox3.TabIndex = 12;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(651, 66);
+            label6.Name = "label6";
+            label6.Size = new Size(38, 15);
+            label6.TabIndex = 13;
+            label6.Text = "label3";
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Location = new Point(569, 143);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(200, 23);
+            dateTimePicker1.TabIndex = 14;
+            // 
             // Parent
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(804, 451);
+            Controls.Add(dateTimePicker1);
+            Controls.Add(label6);
+            Controls.Add(textBox3);
             Controls.Add(button1);
             Controls.Add(btn_child);
             Controls.Add(progressBar1);
@@ -220,5 +249,8 @@
         private Button button1;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem toolStripMenuItem1;
+        private TextBox textBox3;
+        private Label label6;
+        private DateTimePicker dateTimePicker1;
     }
 }
