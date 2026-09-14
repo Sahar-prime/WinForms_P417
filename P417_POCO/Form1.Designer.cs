@@ -40,6 +40,11 @@
             textBoxNewCharacterAge = new TextBox();
             label4 = new Label();
             label5 = new Label();
+            buttonImport = new Button();
+            buttonExport = new Button();
+            saveFileDialog1 = new SaveFileDialog();
+            openFileDialog1 = new OpenFileDialog();
+            label6 = new Label();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             SuspendLayout();
             // 
@@ -148,11 +153,53 @@
             label5.TabIndex = 12;
             label5.Text = "Возраст";
             // 
+            // buttonImport
+            // 
+            buttonImport.Location = new Point(12, 415);
+            buttonImport.Name = "buttonImport";
+            buttonImport.Size = new Size(75, 23);
+            buttonImport.TabIndex = 13;
+            buttonImport.Text = "Импорт";
+            buttonImport.UseVisualStyleBackColor = true;
+            buttonImport.Click += buttonImport_Click;
+            // 
+            // buttonExport
+            // 
+            buttonExport.Location = new Point(12, 386);
+            buttonExport.Name = "buttonExport";
+            buttonExport.Size = new Size(75, 23);
+            buttonExport.TabIndex = 14;
+            buttonExport.Text = "Экспорт";
+            buttonExport.UseVisualStyleBackColor = true;
+            buttonExport.Click += buttonExport_Click;
+            // 
+            // saveFileDialog1
+            // 
+            saveFileDialog1.Filter = "JSON файлы (*.json)|*.json|Все файлы (*.*)|*.*";
+            // 
+            // openFileDialog1
+            // 
+            openFileDialog1.FileName = "openFileDialog1";
+            openFileDialog1.Filter = "JSON файлы (*.json)|*.json|Все файлы (*.*)|*.*";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label6.Location = new Point(288, 54);
+            label6.Name = "label6";
+            label6.Size = new Size(110, 45);
+            label6.TabIndex = 15;
+            label6.Text = "label6";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label6);
+            Controls.Add(buttonExport);
+            Controls.Add(buttonImport);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(textBoxNewCharacterAge);
@@ -187,5 +234,10 @@
         private TextBox textBoxNewCharacterAge;
         private Label label4;
         private Label label5;
+        private Button buttonImport;
+        private Button buttonExport;
+        private SaveFileDialog saveFileDialog1;
+        private OpenFileDialog openFileDialog1;
+        private Label label6;
     }
 }
